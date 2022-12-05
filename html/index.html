@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnTapCK_LT Bai1</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script src="../js/index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="logo">
+                        <img src="../img/logo7.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-8" style="display: flex; align-items: center;">
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="#">Trang chủ</a>
+                            </li>
+                            <li>
+                                <a href="#">Giới thiệu</a>
+                            </li>
+                            <li>
+                                <a href="#">Dịch vụ</a>
+                            </li>
+                            <li>
+                                <a href="#" id="myBtn">Ký gửi hàng hóa</a>
+                            </li>
+                            <li>
+                                <a href="#">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+        </header>
+
+
+        <div class="row" style="border-bottom: 2px solid gray; margin-bottom: 10px;">
+            <div class="col-md-8">
+                <div class="form">
+                    Form
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="qdtt">
+                    <h2>Quy định thanh toán</h2>
+                    <ul>
+                        <li>Khách đặt cọc từ 70% - 100% số tiền của đơn hàng</li>
+                        <li>Hàng về sau 24-48 tiếng kể từ khi kho Trung Quốc kí nhận</li>
+                        <li>Shop sẽ thanh lý đơn hàng nếu sau 1 tuần khách hàng không thanh toán tiền nhận hàng</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end row -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered">
+                    <h4>Danh sách kiện hàng hóa gửi</h4>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Số serial</th>
+                            <th>Mô tả kiện hàng</th>
+                            <th>Hình ảnh</th>
+                            <th>Trọng lượng(kg)</th>
+                            <th>Phí vận chuyển(VND)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>OZMO-600</td>
+                            <td>Robot hút bụi lau nhà Dream D9 Pro</td>
+                            <td>abcxyz</td>
+                            <td>3.5</td>
+                            <td>122500</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- end row -->
+
+        <div class="footer">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Mã số: 19484721 - Họ tên: Trương Huỳnh Hào</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end container -->
+
+     <!-- Modal -->
+     <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Thông tin kiện hàng gửi</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="">Số serial:</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="txtSerial" placeholder="OZMO-600">
+                                <span id="tbSerial" class="text-danger">*</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="">Mô tả kiện hàng:</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="txtMota" placeholder="Robot hút bụi lau nhà Dream D9 Pro">
+                                <span id="tbMota" class="text-danger">*</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="">Hình ảnh:</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="file" class="form-control" id="txtAnh" accept=".jpg .jepg .png">
+                                <span id="tbAnh" class="text-danger">*</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="">Trọng lượng(kg):</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="txtKG" placeholder="3.5">
+                                <span id="tbKG" class="text-danger">*</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="">Chi phí vận chuyển(VND):</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="txtVND" placeholder="192500">
+                                <span id="tbVND" class="text-danger">*</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" id="btnSave" class="btn btn-outline-primary">Xác nhận</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
